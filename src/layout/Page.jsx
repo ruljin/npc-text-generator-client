@@ -1,1 +1,5 @@
-export const Page = ({ children }) => <main>{children}</main>;
+import styles from './page.module.css';
+
+export const Page = ({ children }) => (
+	<main className={styles.page}>{children}</main>
+);
