@@ -5,12 +5,14 @@ import {
 } from 'react-router-dom';
 import { Main } from '../modules/main';
 import { Generator } from '../modules/generator';
+import { NotFound } from '../pages';
 
 export const Routes = () => (
 	<Router>
 		<Switch>
 			<Route path='/' element={<Main />} />
 			<Route path='/generator' element={<Generator />} />
+			<Route path='*' element={<NotFound />} />
 		</Switch>
 	</Router>
 );
