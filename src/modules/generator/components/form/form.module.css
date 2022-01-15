@@ -1,0 +1,11 @@
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.form__actions {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}

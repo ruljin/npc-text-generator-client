@@ -1,5 +1,5 @@
 import { Section } from '../../../components/section/Section';
-import { Actions } from '../../../components/actions/Actionx';
+import { Actions } from '../../../components/actions/Actions';
 import { Button } from '../../../components/button/Button';
 
 export const Main = () => (
