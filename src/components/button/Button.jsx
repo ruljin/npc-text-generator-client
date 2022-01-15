@@ -5,7 +5,7 @@ export const Button = ({ isLink = false, to, children }) => {
 	return (
 		<>
 			{isLink ? (
-				<NavLink className={styles.link__button} to={to}>
+				<NavLink className={styles.button} to={to}>
 					{children}
 				</NavLink>
 			) : (
