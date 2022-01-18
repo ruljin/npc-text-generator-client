@@ -2,9 +2,16 @@ import { useForm } from 'react-hook-form';
 import { InputWrapper } from '../../../../components/input_wrapper/InputWrapper';
 import { Select } from '../../../../components/select/Select';
 import { Button } from '../../../../components/button/Button';
+import {
+	INN_TYPES,
+	PATRONS,
+	LOCATIONS,
+	THREAT_LEVEL,
+	RACES,
+	GENDER,
+	ALIGNMENT,
+} from '../../../../mocks/list';
 import styles from './form.module.css';
-
-const TEST_OPTIONS = [{ id: 1, value: 'test' }];
 
 export const Form = () => {
 	const { register, handleSubmit } = useForm();
@@ -16,47 +23,39 @@ export const Form = () => {
 	return (
 		<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 			<InputWrapper>
-				<Select label='Type' options={TEST_OPTIONS} {...register('type')} />
+				<Select label='Type' options={INN_TYPES} {...register('type')} />
 			</InputWrapper>
 			<InputWrapper>
-				<Select
-					label='Patrons'
-					options={TEST_OPTIONS}
-					{...register('patrons')}
-				/>
+				<Select label='Patrons' options={PATRONS} {...register('patrons')} />
 			</InputWrapper>
 			<InputWrapper>
 				<Select
 					label='Location'
-					options={TEST_OPTIONS}
+					options={LOCATIONS}
 					{...register('location')}
 				/>
 			</InputWrapper>
 			<InputWrapper>
 				<Select
 					label='Threat level'
-					options={TEST_OPTIONS}
+					options={THREAT_LEVEL}
 					{...register('threat')}
 				/>
 			</InputWrapper>
 			<InputWrapper>
-				<Select
-					label='Innkeeper race'
-					options={TEST_OPTIONS}
-					{...register('race')}
-				/>
+				<Select label='Innkeeper race' options={RACES} {...register('race')} />
 			</InputWrapper>
 			<InputWrapper>
 				<Select
 					label='Innkeeper gender'
-					options={TEST_OPTIONS}
+					options={GENDER}
 					{...register('gender')}
 				/>
 			</InputWrapper>
 			<InputWrapper>
 				<Select
 					label='Innkeeper alignment'
-					options={TEST_OPTIONS}
+					options={ALIGNMENT}
 					{...register('alignment')}
 				/>
 			</InputWrapper>
