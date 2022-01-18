@@ -11,13 +11,20 @@ import {
 	GENDER,
 	ALIGNMENT,
 } from '../../../../mocks/list';
+import { getRumors } from '../../../../resources/generator';
 import styles from './form.module.css';
 
 export const Form = () => {
 	const { register, handleSubmit } = useForm();
 
 	const onSubmit = (data) => {
-		console.log(data);
+		getRumors(data)
+			.then((res) => {
+				console.log(res);
+			})
+			.catch((e) => {
+				console.log(e);
+			});
 	};
 
 	return (

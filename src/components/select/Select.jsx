@@ -12,7 +12,7 @@ export const Select = forwardRef(
 				onChange={onChange}
 				onBlur={onBlur}>
 				{options.map((option) => (
-					<option key={option} value={option.id}>
+					<option key={option.id} value={option.id}>
 						{option.value}
 					</option>
 				))}
