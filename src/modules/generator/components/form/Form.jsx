@@ -8,7 +8,7 @@ import {
 	RACES,
 } from '../../../../constants/list';
 import { getRumors } from '../../../../resources/generator';
-import styles from './form.module.css';
+import styles from './Form.module.css';
 
 export const Form = () => {
 	const { register, handleSubmit } = useForm();

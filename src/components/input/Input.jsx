@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './input.module.css';
+import styles from './Input.module.css';
 
 export const Input = ({ label, rest }) => (
 	<label className={styles.label}>

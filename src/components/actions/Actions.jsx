@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import styles from './actions.module.css';
+import styles from './Actions.module.css';
 
 export const Actions = ({ children, className }) => {
 	const actionsClasses = clsx(styles.actions, className);
