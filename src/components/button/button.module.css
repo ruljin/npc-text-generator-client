@@ -1,10 +1,12 @@
+@import '../../variables.css';
+
 .button {
 	cursor: pointer;
 	padding: 6px;
-	font-size: 20px;
+	font-size: var(--font-button);
 	text-decoration: none;
 	letter-spacing: 1px;
-	color: #a5973d;
+	color: var(--color-primary);
 	background-color: rgb(0 0 0 / 40%);
 	border: solid 2px #41403e;
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;

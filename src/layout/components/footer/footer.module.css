@@ -1,16 +1,18 @@
+@import '../../../variables.css';
+
 .footer {
 	position: absolute;
-	color: #fff;
+	color: var(--color-white);
 	bottom: 25px;
 }
 
 .link {
 	color: #fff;
-	text-shadow: 0.2 0 #000;
+	text-shadow: 0.2 0 var(--color-black);
 	text-decoration: none;
 	transition: ease 0.2s;
 }
 
 .link:hover {
-	color: #a5973d;
+	color: var(--color-primary);
 }
