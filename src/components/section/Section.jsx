@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './section.module.css';
 
 export const Section = ({
@@ -10,3 +11,9 @@ export const Section = ({
 		<p className={styles.section__content}>{children}</p>
 	</section>
 );
+
+Section.propTypes = {
+	isWelcomeSection: PropTypes.bool,
+	sectionHeader: PropTypes.string,
+	children: PropTypes.node.isRequired,
+};

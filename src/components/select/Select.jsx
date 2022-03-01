@@ -1,4 +1,5 @@
 import { forwardRef } from 'react';
+import PropTypes from 'prop-types';
 import styles from './select.module.css';
 
 export const Select = forwardRef(
@@ -20,3 +21,11 @@ export const Select = forwardRef(
 		</label>
 	)
 );
+
+Select.propTypes = {
+	label: PropTypes.string,
+	onChange: PropTypes.func,
+	onBlur: PropTypes.func,
+	name: PropTypes.string,
+	options: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

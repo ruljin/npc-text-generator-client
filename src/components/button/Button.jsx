@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import styles from './button.module.css';
 
 export const Button = ({ isLink = false, to, children }) => {
@@ -13,4 +14,10 @@ export const Button = ({ isLink = false, to, children }) => {
 			)}
 		</>
 	);
+};
+
+Button.propTypes = {
+	isLink: PropTypes.bool,
+	to: PropTypes.string,
+	children: PropTypes.node.isRequired,
 };
