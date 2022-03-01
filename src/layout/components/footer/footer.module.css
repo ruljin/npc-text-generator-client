@@ -2,14 +2,14 @@
 
 .footer {
 	position: absolute;
-	color: var(--color-white);
 	bottom: 25px;
+	color: var(--color-white);
 }
 
 .link {
 	color: #fff;
-	text-shadow: 0.2 0 var(--color-black);
 	text-decoration: none;
+	text-shadow: 0.2 0 var(--color-black);
 	transition: ease 0.2s;
 }
 

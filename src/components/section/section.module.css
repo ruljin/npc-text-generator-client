@@ -1,9 +1,3 @@
-@import '../../variables.css';
-
 .section {
 	width: 100%;
-}
-
-.section__content {
-	text-shadow: 0.2px 0px var(--color-black);
 }
