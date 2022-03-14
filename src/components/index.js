@@ -3,6 +3,7 @@ export { Button } from './button/Button';
 export { Divider } from './divider/Divider';
 export { Input } from './input/Input';
 export { InputWrapper } from './input_wrapper/InputWrapper';
+export { Label } from './label/Label';
 export { Modal } from './modal';
 export { Section } from './section/Section';
 export { Select } from './select/Select';

@@ -1,5 +1,7 @@
 @import '../../variables.css';
 
-.paragraph {
+.label {
+	flex-direction: column;
+	display: flex;
 	text-shadow: 0.4px 0px var(--color-black);
 }

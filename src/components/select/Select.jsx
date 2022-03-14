@@ -1,10 +1,11 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import { Label } from '../label/Label';
 import styles from './Select.module.css';
 
 export const Select = forwardRef(
 	({ label, onChange, onBlur, name, options }, ref) => (
-		<label className={styles.label}>
+		<Label>
 			{label}
 			<select
 				className={styles.select}
@@ -18,7 +19,7 @@ export const Select = forwardRef(
 					</option>
 				))}
 			</select>
-		</label>
+		</Label>
 	)
 );
 
