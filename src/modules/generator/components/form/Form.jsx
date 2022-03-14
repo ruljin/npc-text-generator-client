@@ -18,8 +18,10 @@ export const Form = ({ setRumors }) => {
 		console.log(data);
 		getRumors(data)
 			.then((res) => {
-				console.log(res);
-				// setRumors()
+				const results = res.results.slice(0, 10).map((result) => {
+					return { _id: result.episode_id, content: result.opening_crawl };
+				});
+				setRumors(results);
 			})
 			.catch((e) => {
 				console.log(e);

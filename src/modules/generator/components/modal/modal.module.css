@@ -1,0 +1,23 @@
+.divider {
+	position: relative;
+	width: 75%;
+	margin: auto;
+	margin-bottom: 0.83em;
+	height: 1px;
+}
+
+.divider::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(
+		to right,
+		transparent,
+		rgb(48, 49, 51),
+		transparent
+	);
+}
