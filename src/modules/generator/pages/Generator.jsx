@@ -18,12 +18,6 @@ export const Generator = () => {
 			<Typography variant='h2'>Generator</Typography>
 			<Form setRumors={setRumors} />
 			{open && <GossipModal setOpen={setOpen} rumors={rumors} />}
-			<button
-				onClick={() => {
-					setOpen(!open);
-				}}>
-				Open modal
-			</button>
 		</Section>
 	);
 };
