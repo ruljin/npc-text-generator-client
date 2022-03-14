@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
-export const Button = ({ isLink = false, to, children }) => {
+export const Button = ({ onClick, isLink = false, to, children }) => {
 	return (
 		<>
 			{isLink ? (
@@ -10,13 +10,16 @@ export const Button = ({ isLink = false, to, children }) => {
 					{children}
 				</NavLink>
 			) : (
-				<button className={styles.button}>{children}</button>
+				<button className={styles.button} onClick={onClick}>
+					{children}
+				</button>
 			)}
 		</>
 	);
 };
 
 Button.propTypes = {
+	onClick: PropTypes.func,
 	isLink: PropTypes.bool,
 	to: PropTypes.string,
 	children: PropTypes.node.isRequired,
