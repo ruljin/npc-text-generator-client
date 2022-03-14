@@ -10,21 +10,24 @@ import { InkeeperRaceSelect } from './inputs/InkeeperRaceSelect';
 import { getRumors } from '../../../../resources/generator';
 import styles from './Form.module.css';
 
-export const Form = ({ setRumors }) => {
+export const Form = ({ setRumors, loading, setLoading }) => {
 	const formData = useForm();
 	const handleSubmit = formData.handleSubmit;
 
 	const onSubmit = (data) => {
 		console.log(data);
+		setLoading(true);
 		getRumors(data)
 			.then((res) => {
 				const results = res.results.slice(0, 10).map((result) => {
 					return { _id: result.episode_id, content: result.opening_crawl };
 				});
 				setRumors(results);
+				setLoading(false);
 			})
 			.catch((e) => {
-				console.log(e);
+				console.error(e);
+				setLoading(false);
 			});
 	};
 
@@ -38,7 +41,7 @@ export const Form = ({ setRumors }) => {
 				<ThreatLevelSelect />
 				<InkeeperRaceSelect />
 				<Actions className={styles.form__actions}>
-					<Button>Rumors</Button>
+					<Button disabled={loading}>Rumors</Button>
 				</Actions>
 			</form>
 		</FormProvider>
@@ -47,4 +50,6 @@ export const Form = ({ setRumors }) => {
 
 Form.propTypes = {
 	setRumors: PropTypes.func,
+	loading: PropTypes.bool.isRequired,
+	setLoading: PropTypes.func,
 };
