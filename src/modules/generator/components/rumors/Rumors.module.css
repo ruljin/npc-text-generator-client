@@ -1,0 +1,21 @@
+.rumors {
+	margin: 8px 0;
+	padding: 0;
+}
+
+.rumor {
+	display: flex;
+	border-radius: 4px;
+	padding: 5px 0 5px 5px;
+	transition: ease-in-out 0.25s;
+}
+
+.rumor:hover {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.number {
+	margin-right: 10px;
+	font-weight: 600;
+	user-select: none;
+}
