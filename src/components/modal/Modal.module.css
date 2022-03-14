@@ -11,7 +11,11 @@
 }
 
 .modal {
+	position: relative;
+	flex-direction: column;
+	display: flex;
 	width: 50%;
+	height: 75%;
 	padding: 10px 20px;
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	background: rgba(255, 255, 255, 0.575);
@@ -29,5 +33,7 @@
 }
 
 .content {
+	overflow: auto;
 	width: 100%;
+	margin-bottom: 0.83em;
 }
