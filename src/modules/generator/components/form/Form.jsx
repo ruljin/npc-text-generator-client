@@ -1,17 +1,17 @@
-import { useForm } from 'react-hook-form';
-import { InputWrapper, Select, Actions, Button } from '../../../../components';
-import {
-	INN_TYPES,
-	PATRONS,
-	LOCATIONS,
-	THREAT_LEVEL,
-	RACES,
-} from '../../../../constants/list';
+import { FormProvider, useForm } from 'react-hook-form';
+import { Actions, Button } from '../../../../components';
+import { TypeSelect } from './inputs/TypeSelect';
+import { InnSelect } from './inputs/InnSelect';
+import { PatronsSelect } from './inputs/PatronsSelect';
+import { LocationSelect } from './inputs/LocationSelect';
+import { ThreatLevelSelect } from './inputs/ThreatLevelSelect';
+import { InkeeperRaceSelect } from './inputs/InkeeperRaceSelect';
 import { getRumors } from '../../../../resources/generator';
 import styles from './Form.module.css';
 
 export const Form = () => {
-	const { register, handleSubmit } = useForm();
+	const formData = useForm();
+	const handleSubmit = formData.handleSubmit;
 
 	const onSubmit = (data) => {
 		console.log(data);
@@ -25,33 +25,18 @@ export const Form = () => {
 	};
 
 	return (
-		<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-			<InputWrapper>
-				<Select label='Type' options={INN_TYPES} {...register('type')} />
-			</InputWrapper>
-			<InputWrapper>
-				<Select label='Patrons' options={PATRONS} {...register('patrons')} />
-			</InputWrapper>
-			<InputWrapper>
-				<Select
-					label='Location'
-					options={LOCATIONS}
-					{...register('location')}
-				/>
-			</InputWrapper>
-			<InputWrapper>
-				<Select
-					label='Threat level'
-					options={THREAT_LEVEL}
-					{...register('threat')}
-				/>
-			</InputWrapper>
-			<InputWrapper>
-				<Select label='Innkeeper race' options={RACES} {...register('race')} />
-			</InputWrapper>
-			<Actions className={styles.form__actions}>
-				<Button>Rumors</Button>
-			</Actions>
-		</form>
+		<FormProvider {...formData}>
+			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+				<TypeSelect />
+				<InnSelect />
+				<PatronsSelect />
+				<LocationSelect />
+				<ThreatLevelSelect />
+				<InkeeperRaceSelect />
+				<Actions className={styles.form__actions}>
+					<Button>Rumors</Button>
+				</Actions>
+			</form>
+		</FormProvider>
 	);
 };
