@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FormProvider, useForm } from 'react-hook-form';
 import { Actions, Button } from '../../../../components';
 import { TypeSelect } from './inputs/TypeSelect';
@@ -9,7 +10,7 @@ import { InkeeperRaceSelect } from './inputs/InkeeperRaceSelect';
 import { getRumors } from '../../../../resources/generator';
 import styles from './Form.module.css';
 
-export const Form = () => {
+export const Form = ({ setRumors }) => {
 	const formData = useForm();
 	const handleSubmit = formData.handleSubmit;
 
@@ -18,6 +19,7 @@ export const Form = () => {
 		getRumors(data)
 			.then((res) => {
 				console.log(res);
+				// setRumors()
 			})
 			.catch((e) => {
 				console.log(e);
@@ -39,4 +41,8 @@ export const Form = () => {
 			</form>
 		</FormProvider>
 	);
+};
+
+Form.propTypes = {
+	setRumors: PropTypes.func,
 };
