@@ -19,5 +19,4 @@ Modal.Footer = Footer;
 
 Modal.propTypes = {
 	children: PropTypes.node.isRequired,
-	openModal: PropTypes.bool.isRequired,
 };
