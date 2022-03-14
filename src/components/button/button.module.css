@@ -7,16 +7,25 @@
 	color: var(--color-primary);
 	letter-spacing: 1px;
 	text-decoration: none;
-	cursor: pointer;
-	background-color: rgb(0 0 0 / 40%);
+	box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
 	border: solid 2px #41403e;
 	border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-	box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+	background-color: rgb(0 0 0 / 40%);
+	cursor: pointer;
 	transition: all 0.5s ease;
+}
+
+.button:disabled,
+.button:disabled:focus,
+.button:disabled:hover {
+	opacity: 0.5;
+	box-shadow: none;
+	background-color: rgb(0 0 0 / 40%);
+	cursor: default;
 }
 
 .button:focus,
 .button:hover {
-	background-color: rgb(0 0 0 / 60%);
 	box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+	background-color: rgb(0 0 0 / 60%);
 }
