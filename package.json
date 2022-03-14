@@ -2,7 +2,7 @@
 	"name": "npc-text-generator-client",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://ruljin.github.io/",
+	"homepage": "https://ruljin.github.io/npc-text-generator-client",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.1",
 		"@testing-library/react": "^12.1.2",
