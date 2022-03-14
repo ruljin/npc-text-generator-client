@@ -1,7 +1,6 @@
 import { useModalContext } from '../../../components/modal/hooks/useModalContext';
 import { Section, Typography } from '../../../components';
-import { Form } from '../components/form/Form';
-import { GossipModal } from '../modals/GossipModal';
+import { Form, GossipModal } from '../components';
 
 export const Generator = () => {
 	const { open, setOpen } = useModalContext();
@@ -11,12 +10,12 @@ export const Generator = () => {
 			<Typography variant='h2'>Generator</Typography>
 			<Form />
 			{open && <GossipModal />}
-			{/* <button
-	onClick={() => {
-		setOpen(!open);
-	}}>
-	Open modal
-</button> */}
+			<button
+				onClick={() => {
+					setOpen(!open);
+				}}>
+				Open modal
+			</button>
 		</Section>
 	);
 };

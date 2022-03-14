@@ -1,4 +1,4 @@
-import { Modal, Button } from '../../../components';
+import { Modal, Button } from '../../../../components';
 
 export const GossipModal = () => {
 	return (
