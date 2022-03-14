@@ -1,7 +1,8 @@
+import { ModalProvider } from './components/modal/context/ModalContext';
 import { Routes } from './routes';
 
-function App() {
-	return <Routes />;
-}
-
-export default App;
+export const App = () => (
+	<ModalProvider>
+		<Routes />
+	</ModalProvider>
+);
