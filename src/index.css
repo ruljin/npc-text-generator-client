@@ -5,3 +5,12 @@ body {
 	margin: 0;
 	font-family: 'MedievalSharp', cursive;
 }
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 50%);
+}
