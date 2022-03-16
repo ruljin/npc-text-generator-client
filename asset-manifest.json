@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/npc-text-generator-client/static/css/main.03bfd28b.css",
-    "main.js": "/npc-text-generator-client/static/js/main.fd1d3309.js",
+    "main.css": "/npc-text-generator-client/static/css/main.9201b76b.css",
+    "main.js": "/npc-text-generator-client/static/js/main.b3f19e96.js",
     "static/js/787.6c99a85d.chunk.js": "/npc-text-generator-client/static/js/787.6c99a85d.chunk.js",
     "static/media/background.jpg": "/npc-text-generator-client/static/media/background.3539a3f418aa339cc25c.jpg",
     "index.html": "/npc-text-generator-client/index.html",
-    "main.03bfd28b.css.map": "/npc-text-generator-client/static/css/main.03bfd28b.css.map",
-    "main.fd1d3309.js.map": "/npc-text-generator-client/static/js/main.fd1d3309.js.map",
+    "main.9201b76b.css.map": "/npc-text-generator-client/static/css/main.9201b76b.css.map",
+    "main.b3f19e96.js.map": "/npc-text-generator-client/static/js/main.b3f19e96.js.map",
     "787.6c99a85d.chunk.js.map": "/npc-text-generator-client/static/js/787.6c99a85d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03bfd28b.css",
-    "static/js/main.fd1d3309.js"
+    "static/css/main.9201b76b.css",
+    "static/js/main.b3f19e96.js"
   ]
 }
