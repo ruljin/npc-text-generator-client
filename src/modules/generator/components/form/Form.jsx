@@ -1,6 +1,7 @@
+import { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { FormProvider, useForm } from 'react-hook-form';
-import { Actions, Button } from '../../../../components';
+import { Actions, Button, Error } from '../../../../components';
 import { TypeSelect } from './inputs/TypeSelect';
 import { InnSelect } from './inputs/InnSelect';
 import { PatronsSelect } from './inputs/PatronsSelect';
@@ -11,22 +12,22 @@ import { getRumors } from '../../../../resources/generator';
 import styles from './Form.module.css';
 
 export const Form = ({ setRumors, loading, setLoading }) => {
+	const error = useRef();
 	const formData = useForm();
 	const handleSubmit = formData.handleSubmit;
 
 	const onSubmit = (data) => {
-		console.log(data);
+		error.current = false;
 		setLoading(true);
 		getRumors(data)
 			.then((res) => {
-				const results = res.results.slice(0, 10).map((result) => {
-					return { _id: result.episode_id, content: result.opening_crawl };
-				});
+				console.log('RES', res);
+				const results = res;
 				setRumors(results);
 				setLoading(false);
 			})
 			.catch((e) => {
-				console.error(e);
+				error.current = true;
 				setLoading(false);
 			});
 	};
@@ -42,6 +43,9 @@ export const Form = ({ setRumors, loading, setLoading }) => {
 				<InkeeperRaceSelect />
 				<Actions className={styles.form__actions}>
 					<Button disabled={loading}>Rumors</Button>
+					{error.current && (
+						<Error>Ups! An error has occurred, try again now or later.</Error>
+					)}
 				</Actions>
 			</form>
 		</FormProvider>
