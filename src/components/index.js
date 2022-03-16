@@ -1,6 +1,7 @@
 export { Actions } from './actions/Actions';
 export { Button } from './button/Button';
 export { Divider } from './divider/Divider';
+export { Error } from './error/Error';
 export { Input } from './input/Input';
 export { InputWrapper } from './input_wrapper/InputWrapper';
 export { Label } from './label/Label';
